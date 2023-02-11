@@ -1,0 +1,303 @@
+Notes taken from graduation internship orientation papers.
+
+List of keywords gathered from/for all papers / ontology:
+	- Paper 1.
+		invasive alien species
+		live animal smuggling
+		conservation
+		biosecurity
+		illegal trade
+		legal trade
+		illicit trade
+		drivers of trade
+		risk
+		recipient countries
+		high-profile products and derivatives
+		global trade
+		global transport
+		concern
+		biodiversity loss
+		biosecurity risk
+		transporting wildlife
+		harvesting wildlife
+		exotic pet trade
+		pathway
+		biological invasions
+		vertebrates
+		risk assessment
+		negative impacts
+		incoming species
+		monitoring
+		smuggling probability
+		species-level trait
+		extinction risk
+		species desire and demand
+		smuggling interventions
+		anti-smuggling enforcement
+		surveillance
+		species-identification training 
+	- Paper 2. 
+		iEcology
+		patterns and processes
+		emerging technologies
+		digital data
+		biodiversity
+		biogeography
+		culturomics
+		big data
+		data mining
+		digital data
+		internet
+		social media
+		metadata
+		Abiotic/biotic interactions
+		distributions
+		occurrences/abundances
+		impacts/threats
+		dynamics
+		phenology
+		ecological informatics
+		APIs
+	- Paper 3+4.
+		public interest
+		public awareness
+		adaptive applicability of iEcology
+		relative search volume
+	- Paper 5,
+		invasive vector species
+		ecological impacts
+		socio-economic impacts
+	- Paper 6.
+		captive-bred
+	- Paper 7. 
+		species management
+		exposure
+		laypeople
+
+
+Papers notes. 
+	Paper 1. 
+	- Title: Live reptile smuggling is predicted by trends in the legal exotic pet trade 
+		- Abstract/introduction
+			- smuggle trade: time lag of 5.6 years from first trade to USA and first appearance in AUS trade.
+			- bayesian regression model for species popularity modeling --> positive association between regions. 
+			- "there is a paucity of predictive research aimed at characterizing illegally smuggled species in order to preempt future threats and drive biosecurity decision-making"
+			- smuggling is illicit and occluded in nature, making it arduous to observe and research. 
+			- research aimed at identifiying relations between reptile smuggling from USA to AUS. 
+			- smuggled species manage to continuously circumvent countries trade bans and regulations. 
+			- USA contributes largest volume and most diverse set of live pets globally, best proxy for trade monitoring.
+				- bigger numbers = easier to monitor.
+			- bayesian regularized logistic regression model for relationship between probability of reptile species being smuggled.
+				- traits, taxonomy, and trade-based covariates were used in the model.
+			- predict priority risk species. 
+			- 1445 species recorded in US trade, 74 of which illegal (5%). 
+			- Popular illegally smuggled species: corn snake (Pantherophis guttatus), leopard gecko (Eublepharis macularius), and red-eared slider (Trachemys scripta elegans). 
+		- Methods
+			- dataset from recorded alien vertebrate incursions to AUS from 1999 to 2016.
+			- Stringham and Lockwood web scraping effort of online US pet stores: https://conbio.onlinelibrary.wiley.com/doi/10.1111/cobi.13578 
+			- Resolved species names and high-level taxa to the GBIF taxonomic database: https://www.gbif.org/what-is-gbif
+			- important: appendix s1 for data compilation methods!
+			- 8 explanatory variables to hypothesize influence of smuggling probability -> most had a positive influence.
+				- 5 continuous covariates are market-level indicators of abundance or popularity in the US reptile trade (LEMIS dataset)
+				- CITES listings as a categorical covariate. 
+				- adult mass as a species-level trait.
+				- taxonmoic family as a random effect.
+			- fivefold cross-validation (?)
+			- diagnostic metrics on training and testing datasets: ROC AUC (Area Under the Receiver Operating Characteristic Curve), Bayesian p-values, uniformity of residuals, presence of outliers, dispersion, and zero inflation. See appendix S3. 
+		- results and discussion
+			- Demand for popular species in other countries may be fueled by global connectedness and facilitated by the Internet and related social media: https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/conl.12833#conl12833-bib-0027 
+			- the pervasive influence of the United States in driving the reptile trade appears to be substantial—similar to many other aspects of Westernized culture 
+			- popular species in the trade are globally threatened by the trade -> astrochelys yniphora. 
+			- in addition to the knowledge of the US market, we found it was important to consider taxonomy, CITES listings, and international market trends when identifying species at high risk of smuggling.
+			- smuggling trends are likely broadly relevant to other traded taxa and other western markets. 
+			- Considering the data we used was relatively easy to obtain or publicly available, future application to other countries and taxa is possible and highly desirable.
+
+	Paper 2. 
+	- Title: iEcology: Harnessing Large Online Resources to Generate Ecological Insights
+		- Introduction/highlights
+			- iEcology definition: a new research approach that seeks to quantify patterns and processes in the natural world using data accumulated in digital sources collected for other purposes. 
+			- iEcology enhanced by: emerging technologies such as automated content analysis, apps, internet of things, ecoacoustics, web scraping, and open source hardware.
+			- internet ecology to generate insights about species distributions over space and time, interactions and dynamics of organisms and their environment, and anthropogenic impacts.
+			- iEcology has the potential to provide new understandings of ecological dynamics and mechanisms, complementing more traditional methods of obtaining ecological data.
+			- tools: automated web-crawlers and data analysis, AI/ML, Natural language processing (NLP), time-series analysis.
+			- iEcology passive crowdsourcing: collecting data generated online by human society from diverse sources and branches.
+			- conservation culturomics: an emerging research area in conservation science - albeit with a different focus.
+			- Flickr, news articles, Twitter, YouTube, Facebook, and Google Trends
+			- For this paper goes the following: study some of the references, they are probably more interesting than the main paper. 
+			- biological research has been performed using non biological dataset analysis such as image analysis, tweets, and news articles. 
+		- iEcology Research Toolbox - data types, sources, methods:
+			- 2 categories: uploaded multipurpose data, and data on online activity (data access, search engine usage)
+			- The analysis of iEcology data faces similar challenges and uses the same solutions as many other approaches for analysis of Big Data.
+			- Emerging Technologies Relevant for iEcology:
+				- apps and games; gamifying nature can motivate the public to interact with their environment. 
+				- automated content analysis.
+				- bioacoustics and ecoacoustics
+				- blockchain (lmao, not a fan)
+				- internet of things
+				- open source hardware; better hardware = better data collection.
+				- web scraping (interesting source leads to paper I already read, lol)
+		- caveats and solutions
+			- data is not generated systematically (no ontologies or unionized rules between data gathering/publishing), leading to inherent risks of biases which can complicate data interpretation.
+			- culturomics can provide critical support to understand societal perceptions, interests, and values that affect the process of data generation.
+			- GBIF database is named again.
+			- good record keeping and maintaining high metadata standards is of particular importance to iEcology. 
+			- To alleviate concerns surrounding interpretation and reproducibility: (i) good record keeping of protocols for data access, handling, versioning, and analysis; (ii) harmonization of methods [58] and standardization of metadata; (iii) publishing (when possible) raw data in freely accessible and stable repositories together with associated scripts; (iv) use of open-source data and software; and (v) keeping up to date with methodologies developed in other relevant fields (e.g., computational sociology) for assessing and addressing such issues.
+			- Concluding remarks and future perspectives
+				- ecology is rapidly shifting towards technology based automated observations; iEcology.
+				- understanding nature ecoinformatics could prove valuable. 
+				- looks toward a global digital monitoring initiative for the natural world. 
+
+	Paper 3. 
+	- Title: Expanding conservation culturomics and iEcology from terreestrial to aquatic realms
+		- Abstract and introduction:
+			- Culturomics and iEcology are two separate areas, they are not the same.
+			- Paper focuses on the aquatic realm
+				- management of protected areas, fisheries, flagship species identification, detection and distribution of threatened, rare, and alien species. Assessment of ecosystem and antrhopogenic impacts, and social impact assessment. 
+			- looking toward wider applications of new digital approaches to science and conservation of freshwater and marine environments and those who depend on them. 
+			-  Aquatic species face disproportionately higher extinction risks than terrestrial species.
+			- Research in aquatic environments is hindered by limited accessibility and low species detectability.
+			- aquatic environments are hard to document, especially in terms of culturomics and iEcology as it comes with certain difficulties that complicate direct observations. 
+			- culturomics can help identify promising flagship surrogate species based on societal interest across many candidate species while iEcology can help identify potential umbrella species by mapping their distribution and overlaps with key habitats and co-occurring species.
+		- management of protected areas and landscapes and other chapters.
+			- references:  [10,11,13,65,66]
+			- instagram datausage: references 67, 68 
+			- sentimental analysis of news articles, forums and blogs: ref 69.
+			- caveats and challenges: data availability, biases, linguistic challenges, semantic challenges. 
+			- this paper gives a great overview of the challenges and biases associated with conservation culturomics and iEcology research. 
+
+	Paper 4. 
+	- Title: Spatio-temporal dynamics and driver of public interest in invasive alien species
+		- Abstract and introduction:
+			- Using relative search volume (RSV) on google as a proxy to measure public's interest in IAS.
+			- A time-sereies analysis of the RSV was performed as well.
+			- fire ants in japan, culturomics. 
+			- Focus on increasing public interest in IAS to facilitate early detection and identification.
+			- current understanding of the pattern of both spatial and temporal variations in public interest in IAS, as well as its key drivers, is still quite limited. More data is hard to collect.
+			- Usage of google trends for this. 
+			- expected that the spatial and temporal patterns of public interest in IAS would be influenced by ecological and social variables.
+		- materials and methods:
+			- 31 IAS were researched
+			- database used was database of ministry of environment
+			- google news and google trends
+			- google trends volume as a publix interest index. 
+			- limited time frame of 5 years due to possible IAS distribution fluctuations. 
+			- piecewise SEM package. 
+			- "path model" to examine direct and indirect effects of the distribution of IAS on the RSV. 
+			- invasion reports of S. invicta LMEs with LME4 and Lmer package in R. 
+			- shinbun trend tool in the NIKKEI telecom database to obtain japanese articles/newspapers. 
+		- dicussion
+			- successfully illustrated spatial and temporal dynamics of public inteterest in IAS across Japan.
+			- variation inpublic interest is explained by ecological and social factors associated with the invasion of IAS.
+			- spatial distribution absence/presence of IAS matches RSV regions. 
+			- only one means of influential media was analysed, more have played a role.
+			- likely a bidirectional relation between the number of news articles and the RSV. 
+			- 
+
+	Paper 5. 
+	- Title: GoogleTrends reflects the abundance of the Asian tiger mosquito (Aedes albopictus): a call for  the web-based surveillance of invasive alien vector species.
+		- Abstract + introduction:
+			- The logarithm of the level of infestation from A. albopictus had a very strong causal effect over the total volume of Google searches, statistical model highly predictive for google trends, thus google trends is a proper proxy to simulate real infestation levels.
+			- There are few validating GoogleTrends studies on surveillance data. 
+			- data collection is happening, but is not performed homogenically; long-term data is missing too and no open-access dataset from Europe is available (on vectorbase)
+			- there is limited interest effort and interest in using on-line search volumes for monitoring population dynamics of IAS vectors. 
+			- little comparative effort have been undertaken to validate googletrends data in conservation biology against ecological data from the field, like in epidemiology. 
+			- Note: paper is mainly wondering why so little online usage data has been used in the field so far.
+		- Methods and Results:
+			- hypothesis: H1 - the level of infestation by A. albopictus influenced the value of the GoogleTrends index, at the same time unit.
+			- time unit 10 years, 2011-2020. location Emilia-Romagna, Italy. 
+			- Google trends index was extracted, obtained as follows: dividing the monthly number of searches for a certain keyword for the total volume of google searches in the same timespan and area --> then dividing again this value for the maximum value in the time series --> and multiplying by 100 (deel/geheel*100). 
+			- matching the two time series; monthly nr of expected eggs was calculated, averaged across the 9 measuring locations, in order to obtain 1 value for the whole region. avg # of eggs = lvl of infestation.
+			- Testing for H1: the model predicted monthly values for infestation degree. 
+				- figure shows seasonal fluctions, lvl of infestation correlates highly with online search values. One outlier in july 2018, probably related to a regional communication about vector-borne diseases.
+			- "remarkable association between the level of infestation and the GoogleTrends index for A. albopictus in region X for the chosen time unit"
+			- Considerable proportion of variability in the data --> R2 = 0.96, model had a good fit, thus support for H1 was found. 
+		- Discussion and conclusions:
+			- Google trends data can be used to validate long-term large-scale field data on IAS, and vice versa probably. 
+			- assumption: # of mosquitos experienced by people led them to document about them on the internet. 
+			- GoogleTrends might be a valuable proxy for the level of infestation, at least in areas characterized by a good access to the Internet, a prolonged period of infestation and relatively large urbanized areas, the main habitat for A. albopictus in its native and invaded range.
+			- Be careful not to use google trends to naïvely; in cases of epidemics surrounding a target species, discard areas and timespan affected by epidemics, or adopt ad-hoc approaches to data analysis (longitudinal quantile regression for example). 
+			- research is applicable on other iconic invasive alien pests.
+			- google trends could be adopted to map population dynamics of invasive alien pests and vector species; the data of which could be adopted for surveillance, to detect areas of geographical expansion and also phenological changes related to climate change. 
+			on-line search volumes will be a fundamental complement to field-based sampling, whose implementation will hardly keep the same pace of biological invasions. 
+
+	Paper 6.
+	- Title: Using Google Trends to Determine Current, Past, and Future Trends in the Reptile Pet Trade.
+		- Summary + Abstract:
+			- Google trends reptile popularity check
+			- large parts of legal captive reptile pet trade unregulated, unmonitored. 
+			- popularity of reptile species fluctuated due to new regulations.
+			- popularity across multiple species was checked in various countries. 
+			- Google trends is a useful tool for determining relative popularity among reptiles. 
+		- Introduction:
+			- almost 80% of traded reptile species are not subject to CITES trade regulations and are not systematically recorded, resulting in very limited data on most traded species. 
+			- american reptile trade is so popular, it is the major exporter of species that are not native to North America. 
+			- "To fully grasp the extent and trends of the reptile trade, it is necessary to recognize these commonly traded species and help fill in the large knowledge gap in this growing trade."
+				- surveys: they work well but are time intensive, and representation might be incorrect.
+				- analyzing internet available data: 
+		- Methodology:
+			- Facebook, ResearchGate, Twitter, Reddit, were targeted
+			- 25 popular pet reptiles.
+			- Manual surveys to check for pet popularity.
+			- Google trends compare limit = 5 items
+			- Google Trends is a measure of relative search patterns and different comparisons will produce different results, as it is highly sensitive to the benchmark term used [38,46]. (check out these references, they are probably important)
+				- search topic reptiles was used.
+		- Results and discussion:
+			- The paper is very aware it is the first that researched pet reptile popularities. 
+			- Discussion reads largely as a results section, starting out with naming numerous facts and additional info.
+			- additional notes to be taken when re-reading the paper. 
+
+	Paper 7. 
+	- Title: Combining surveys and on-line searching volumes to analyze public awareness about invasive alien species: a case study with the invasive Asian yellow-legged hornet (Vespa velutina) in Italy.
+		- Abstract and Introduction:
+			- Surveey to 358 beekeepers for their information sources. 
+			- Again, internet searches peaked during the activity period of the species and increased over time, with thousands of visits to wikipedia each mont.
+			- Beekeepers are aware of the impacts of V. velutina in Italy. 
+			- public interest in the species is growing, as well as species surveillance and information campaigns etc.. 
+			- Awareness raising is a prerequisite for attitudinal and behavioral change --> why surveillance of public interest is also needed. 
+			- manual surveys fail at larger spatial and temporal levels of detail, and are more expensive. 
+			- management costs for V. velutina in France, Italy, and the Uk together estimated to be almost 30 million euros per year.
+			- Compared impacts of invasive hornet to impacts of native hornet.
+		- Methods:
+			- Google trends and wikipedia data analysis.
+			- same trend index scaling to normality as other papers (between 0 and 100, basically giving a % instead of a number).
+			- Potential for Conflict Index (PCI, Vaske 2018) was used, as well a x2 test of independence.
+			- Funny statistical distributions
+		- Discussion:
+			- Exposure to info on species affected beekeepers concerns about the species.
+				- respondents from invaded areas were even more concerned.
+			- beekeepers informed other beekeepers. 
+			- Beekeepers could be fundamental to monitor the invasive hornet species at national scale (basically, utilize the most concerned and applicable group of people to monitor said species; fishermen for invasive marine species.)
+			- seasonality of internet searches about the hornet is correlated with the phenology of the species, searches spiking during the active seasons when people can observe it in the environment. 
+			- high wikipedia search volume, definitely attributable to laypeople as well. 
+			- google trends index is discounted for the overall number of searches on Google betwee 2013 and 2020, indicating a growing proportion of people interested in V. velutina. 
+			- currently usi
+
+
+Vragen opgekomen volgende uit het lezen van de papers:
+- Research scope: voor welke regio willen we de ruilhandel in kaart brengen, is dit enkel Nederland of grotere delen van Europa?
+- Research scope: 
+- Data: welke exacte lijst van dier en plantensoorten houden we aan voor het project, is dit de IUCN lijst?
+	- voorstel: lijst op site x.
+- Voorstel workflow:
+	- orientatie > webscraping > opslag > model building > risk assessment.
+- woordkeuze: noemen we het illegal transport, trade, smuggling; what do we use?
+- welke parameters gebruikt op marktplaats in het R script om zoveel resultaten te verkrijgen? ik kreeg nauwelijks resultaten met mijn simpele zoektocht.
+- willen we de focus leggen op google trends (dit lijkt een erg powerful tool om public interest mee te meten), of proberen te leggen op het vinden van gesmokkelde dieren/planten (minder data, moeilijker te vinden/lastig te minen, kost meer tijd).
+- kiezen we 1 of een aantal model organismen om verder onderzoek op uit te voeren?
+- willen we een time-series onderzoek doen, op welke tijdschaal? (5-10 jaar is waarschijnlijk het best handelbaar en het meest gezien). 
+	- Als we een time series doen, waar vergelijken we de google trends analyse mee? is er een database met time series om public interest mee te vergelijken? Waarom doen we dit?
+- waar zijn de slakken en mosselen papers?
+
+
+
+Ideeën / gedachten alsvolgt van de papers:
+- loggen datum van laatste scraping event, dit gebruiken als eerste zoekdatum van volgende scraping. 
+- hele applicatie op een server draaien, zodat deze automatisch elke nacht een nieuwe inventarisatie maakt. 
+- Introductie: Although recent interest in online surveillance of smuggling activities, public interest in IAS, and other applications of iEcology have risen, a knowledge gap between the established field of Ecology is presented. More effort is needed to increase current insight on the effects and impacts that online smuggling activities of IAS have on recipient countries.
+	- Recent studies (reference given papers) have shown that frequently visited places on the internet (E.g. Google, Wikipedia) are valuable tools to draw conclusions about the awareness of stakeholders and the general public on invasive alien species, in the cases of multiple alien species (yellow-legged hornet, asian tiger mosquito, . 
+- Men maakt allemaal assumpties van gebruik van google trends, ieder een vorm van populariteit in het onderwerp, maar feitelijk is het niks meer dan pure google zoektermen. 
+- Is het interessant om uit te zoeken wat de "populairste" gesmokkelde dier/planten soorten zijn?
+- De papers die ik heb gelezen zijn allemaal gefocust op dieren, willen we ook kijken naar planten ruilhandel, of is dit niet interessant/significant?
+- Ik zou dit project graag gefragmenteerd aanpakken: per onderdeel werken, zien hoe ver we komen met ieder stuk. Ik denk dat het het beste is om te starten met Google Trends te scrapen. 
+- Veel van deze studies zijn in Italië gevestigd, was dit toeval?
+- Note: ik weiger zelf surveys/questionnaires af te nemen voor deze stages. 
